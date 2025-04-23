@@ -1,30 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
-}
-
-div{
-    width: fit-content;
-    margin: 0 auto;
-    align-items: center;
-    text-align: center;
-    border: rgb(188, 39, 39) 2px solid;
-    border-radius: 20px;
-    height: 100vh;
-    background-color: rgb(164, 157, 150);
-}
-
-.title{
-    font-weight: bolder;
-    color: black
-}
-
-.tag , .addBtn{
-    text-transform:capitalize ;
-    color: white;
-    background-color: blueviolet;
-    width: fit-content;
-    border-radius:10px;
-    margin: 0 auto;
-}
-
+    box-sizing: border-box;
+  }
+  
+  :root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    background-color: rgb(237, 237, 238);
+  }
