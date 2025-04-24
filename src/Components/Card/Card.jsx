@@ -1,17 +1,18 @@
 import "./card.css";
+import React from 'react';
 
-function Card({imageSrc,title,tag,price,status,addBtn}) {
+function Card({ name, tag, price, imageSrc, available , onAdd }) {
+
   return (
     <div className="product-card">
-      <img src={imageSrc} className="img" alt={`image of ${title}`} />
-      <h2 className="titre">{title}</h2>
+      <img src={imageSrc} alt={name} />
+      <h2>{name}</h2>
       <p className="tag">{tag}</p>
-      <p className="prix">{price} €</p>
-      <p className="status">{status}</p>
-      <p className="addBtn">{addBtn}</p>
+      <p>Prix : {price} €</p>
+      <p>{available ? "Disponible" : "En rupture"}</p>
+      <button onClick={() => onAdd(price)}>Ajouter</button>
     </div>
   );
 }
 
-export default Card ;
-
+export default Card;

@@ -1,0 +1,12 @@
+.basket {
+    width: 700px;
+    background-color: white;
+    text-align: center;
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+    padding: 1rem;
+}
+
+.basket h2{
+    margin-bottom:  4rem;
+}
