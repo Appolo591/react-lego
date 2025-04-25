@@ -1,8 +1,21 @@
 import "./card.css";
 import React from 'react';
 
-function Card({ name, tag, price, imageSrc, available , onAdd }) {
-
+function Card({ 
+    name, 
+    tag, 
+    price, 
+    imageSrc, 
+    available , 
+    onUpdateTotal , 
+    onUpdateArticles, 
+    articles , 
+    total
+  }) {
+  const handleClick = () =>{
+    onUpdateTotal(total +price);
+    onUpdateArticles([...articles, name]);
+  };
   return (
     <div className="product-card">
       <img src={imageSrc} alt={name} />
@@ -10,7 +23,7 @@ function Card({ name, tag, price, imageSrc, available , onAdd }) {
       <p className="tag">{tag}</p>
       <p>Prix : {price} €</p>
       <p>{available ? "Disponible" : "En rupture"}</p>
-      <button onClick={() => onAdd(price)}>Ajouter</button>
+      <button onClick={handleClick}>Ajouter</button>
     </div>
   );
 }

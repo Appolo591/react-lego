@@ -1,13 +1,19 @@
 import "./basket.css";
 import React from 'react';
 
-function Basket({total}) {
+
+function Basket({total , articles}) {
+    
     return (
-        <>
+        <div className="basket-container">
             <h1 >Panier</h1>
-            <p>Aucun produit n'a été ajouté</p>
-            <p>Le compteur est à : {total}</p>
-        </>
+            <ul>
+                {articles.map((article) => (
+                <li>{article}</li>
+                ))}
+            </ul>
+            {total > 0 ? <h2>Le compteur est à : {total} €</h2> : <h2>Aucun produit n'a été ajouté</h2>}
+        </div>
     );
 }
 
